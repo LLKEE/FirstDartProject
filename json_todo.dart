@@ -2,7 +2,7 @@ import 'package:json_todo/json_todo.dart' as json_todo;
 import 'dart:io';
 import 'dart:convert';
 
-Map<String?, String?> createNote(){
+Map<String?, String?> getNoteFromUser(){
   
   Map<String?, String?> note = {};
 
@@ -15,6 +15,7 @@ Map<String?, String?> createNote(){
   note = {Name: Note };
 
   return note;
+
 }
 
 
@@ -151,7 +152,7 @@ void main(List<String> arguments) async {
 
     if (answer == "1"){
      
-      note = createNote();
+      note = getNoteFromUser();
 
       await nm.addNote(note);
 
